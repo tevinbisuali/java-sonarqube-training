@@ -3,26 +3,15 @@ package com.example;
 public class App {
 
     public static void main(String[] args) {
-        String password = "admin123";
-        System.out.println(password);
-
-        printUserInfo();
-        printAdminInfo();
+        printInfo("John", "User", "Basic", "IT", "Dallas");
+        printInfo("Alice", "Admin", "Full", "IT", "Dallas");
     }
 
-    public static void printUserInfo() {
-        System.out.println("Name: John");
-        System.out.println("Role: User");
-        System.out.println("Access: Basic");
-        System.out.println("Department: IT");
-        System.out.println("Location: Dallas");
-    }
-
-    public static void printAdminInfo() {
-        System.out.println("Name: John");
-        System.out.println("Role: User");
-        System.out.println("Access: Basic");
-        System.out.println("Department: IT");
-        System.out.println("Location: Dallas");
+    public static void printInfo(String name, String role, String access, String department, String location) {
+        System.out.println("Name: " + name);
+        System.out.println("Role: " + role);
+        System.out.println("Access: " + access);
+        System.out.println("Department: " + department);
+        System.out.println("Location: " + location);
     }
 }
