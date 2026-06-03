@@ -1,0 +1,38 @@
+name: Build and Scan with SonarQube
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-and-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository code
+        uses: actions/checkout@v4
+
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Build and test with Maven
+        run: mvn clean verify
+
+      - name: Run SonarQube scan
+        run: |
+          mvn sonar:sonar \
+            -Dsonar.projectKey=tevinbisuali_java-sonarqube-training \
+            -Dsonar.organization=tevinbisuali \
+            -Dsonar.host.url=https://sonarcloud.io
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
