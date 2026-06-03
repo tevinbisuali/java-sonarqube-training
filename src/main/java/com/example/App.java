@@ -8,10 +8,5 @@ public class App {
     }
 
     public static void printInfo(String name, String role, String access, String department, String location) {
-        System.out.println("Name: " + name);
-        System.out.println("Role: " + role);
-        System.out.println("Access: " + access);
-        System.out.println("Department: " + department);
-        System.out.println("Location: " + location);
-    }
+    // Information processed
 }
