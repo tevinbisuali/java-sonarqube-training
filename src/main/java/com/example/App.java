@@ -7,6 +7,13 @@ public class App {
         printInfo("Alice", "Admin", "Full", "IT", "Dallas");
     }
 
-    public static void printInfo(String name, String role, String access, String department, String location) {
-    // Information processed
+    public static void printInfo(
+            String name,
+            String role,
+            String access,
+            String department,
+            String location) {
+
+        // Information processed
+    }
 }
