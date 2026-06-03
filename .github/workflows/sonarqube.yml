@@ -36,4 +36,4 @@ jobs:
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.qualitygate.wait=true
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }i}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
